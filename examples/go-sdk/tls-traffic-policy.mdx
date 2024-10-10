@@ -10,7 +10,7 @@ import (
 func ngrokListener(ctx context.Context) (net.Listener, error) {
   return ngrok.Listen(ctx,
     config.TLSEndpoint(
-      config.WithPolicyString(getPolicyFromFile()),
+      config.WithTrafficPolicy(getPolicyFromFile()),
     ),
     ngrok.WithAuthtokenFromEnv(),
   )
@@ -80,4 +80,4 @@ on_tcp_connect:
 
 Go Package Docs:
 
-- [https://pkg.go.dev/golang.ngrok.com/ngrok/config#WithPolicy](https://pkg.go.dev/golang.ngrok.com/ngrok/config#WithPolicy)
+- [https://pkg.go.dev/golang.ngrok.com/ngrok/config#WithTrafficPolicy](https://pkg.go.dev/golang.ngrok.com/ngrok/config#WithTrafficPolicy)

@@ -11,7 +11,7 @@ import (
 func ngrokListener(ctx context.Context) (net.Listener, error) {
   return ngrok.Listen(ctx,
     config.HTTPEndpoint(
-      config.WithPolicyString(getPolicyFromFile()),
+      config.WithTrafficPolicy(getPolicyFromFile()),
     ),
     ngrok.WithAuthtokenFromEnv(),
   )
@@ -102,4 +102,4 @@ on_http_response:
 
 Go Package Docs:
 
-- [https://pkg.go.dev/golang.ngrok.com/ngrok/config#WithPolicyString](https://pkg.go.dev/golang.ngrok.com/ngrok/config#WithPolicyString)
+- [https://pkg.go.dev/golang.ngrok.com/ngrok/config#WithTrafficPolicy](https://pkg.go.dev/golang.ngrok.com/ngrok/config#WithTrafficPolicy)

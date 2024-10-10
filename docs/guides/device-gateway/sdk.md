@@ -279,7 +279,7 @@ the request:
 		"protocol": "http",
 		"forwards_to": "localhost:8001",
 		"domain": "device123.sitea.configurable-domain.com",
-		"policy": "{\"on_http_request\": [], \"on_http_response\": [{\"expressions\": [], \"name\": \"Add headers to requests\", \"actions\": [{\"type\": \"add-headers\", \"config\": {\"headers\": {\"is-ngrok\": \"0000000000\"}}}]}]}"
+		"traffic_policy": "{\"on_http_request\": [], \"on_http_response\": [{\"expressions\": [], \"name\": \"Add headers to requests\", \"actions\": [{\"type\": \"add-headers\", \"config\": {\"headers\": {\"is-ngrok\": \"0000000000\"}}}]}]}"
 	}
 ]
 ```
