@@ -22,11 +22,11 @@ import TrafficPolicyWarning from "/shared/warnings/traffic-policy-preview.mdx";
 
 ## Overview
 
-This module allows you to assign a policy to your endpoints containing a series
-of `on_tcp_connect`, on_http_request`, and `on_http_response` rules that can be used to influence and control traffic
-to and from your upstream service.
+"This module enables you to assign a policy to your endpoints by defining a set of rules for three traffic management phases:
+`on_tcp_connect`, `on_http_request`, and `on_http_response`. These rules allow you influence and control traffic to and from
+your upstream service."
 
-Policy rules are composed of expressions that filter the traffic on which they are applicable
+Traffic Policy rules are composed of expressions that filter the traffic on which they are applicable
 and actions that should take effect.
 
 ## Example Usage
@@ -66,7 +66,7 @@ actions are performed is determined at runtime by the expressions.
 
 ### Expression Evaluation
 
-Traffic Policy expressions are written using the [Common Expression Language (CEL)](https://github.com/google/cel-spec). Policy expressions must evaluate to true
+Traffic Policy expressions are written using the [Common Expression Language (CEL)](https://github.com/google/cel-spec). Traffic Policy expressions must evaluate to true
 in order for policy actions to take effect. There is no behavioral difference between adding multiple expressions to a single policy rule and having one
 single expression with multiple statements logically conjoined together (i.e. `["1 == 1 && 2 == 2"]` is the same
 s `["1 == 1", "2 == 2"]`).
